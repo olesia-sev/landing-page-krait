@@ -1,0 +1,104 @@
+.download {
+  background: $gradient;
+  padding: 120px 0;
+
+  @include phones480 {
+    padding: 40px 0;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include phones480 {
+      margin-top: 40px;
+    }
+  }
+
+  &__link {
+    width: 33%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, .07);
+    transition: all .3s;
+
+    @include tablets {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    @include phones {
+      width: 100%;
+    }
+  
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include tablets {
+        margin-right: 0;
+      }
+    }
+    
+    &:hover {
+      box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, .3);
+    }
+
+    &:hover .download__title {
+      color: #f31f79;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__pic {
+    background-color: #f7fafc;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+      width: 40%;
+    }
+  }
+
+  &__img {
+    height: 50px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-family: dosis;
+    font-size: 30px;
+    color: #222;
+    font-weight: 600;
+    transition: all .3s;
+  }
+
+  &__text {
+    width: 75%;
+    height: 100%;
+    padding: 30px 30px 30px 20px;
+    font-family: roboto;
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+
+    @include tablets {
+      width: 60%;
+    }
+  }
+}

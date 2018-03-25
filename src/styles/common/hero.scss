@@ -1,0 +1,101 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-image: url('../images/iPhones.png'), linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 70%;
+  background-size: 50%, cover;
+
+  @include phones480 {
+    background-size: 70%, cover;
+    background-position-x: 100%;
+    background-position-y: 97%;
+  }
+
+  @include phones {
+    background-position-y: 34%;
+  }
+
+  &__main {
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include laptop {
+      width: 60%;
+    }
+    @include tablets {
+      width: 70%;
+    }
+    @include phones480 {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: dosis;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 60px;
+    margin-bottom: 23px;
+
+    @include phones480 {
+      font-size: 48px;
+    }
+
+    @include phones {
+      font-size: 34px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    line-height: 24px;
+  }
+
+  &__item {
+    font-weight: 400;
+    position: relative;
+    margin-left: 5%;
+
+    @include phones {
+      margin-left: 10%;
+      line-height: 17px;
+    }
+
+    &:before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: url('../images/check-circle.svg') center center no-repeat;
+      position: absolute;
+      left: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+
+      @include phones {
+        left: -10%;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 320px) {
+  .hero {
+    height: 100%;
+    padding-bottom: 40px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

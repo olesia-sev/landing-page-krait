@@ -1,0 +1,22 @@
+.carousel {
+  height: 100%;
+}
+.carousel-item {
+  opacity: 1!important;
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, .1);
+  overflow: hidden;
+
+  @include phones {
+    box-shadow: none;
+  }
+}
+
+.carousel-item {
+  width: 360px!important;
+  height: 500px!important;
+
+  @include phones {
+    width: 300px!important;
+    height: 400px!important;
+  }
+}

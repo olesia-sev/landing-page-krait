@@ -1,0 +1,96 @@
+.burger {
+  display: none;
+
+  @include tablets {
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    margin-left: 15px;
+    position: relative;
+    z-index: 15;
+    cursor: pointer;
+  }
+
+  &__line-1,
+  &__line-2,
+  &__line-3 {
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, .3);
+    transition: all .3s;
+  }
+
+  &__line-2 {
+    margin-top: 8px;
+  }
+
+  &__line-3 {
+    margin-top: 16px;
+  }
+}
+
+.menu-on .burger__line-1 {
+  transform: rotate(45deg);
+  margin-top: 8px;
+  z-index: 2;
+}
+
+.menu-on .burger__line-3 {
+  transform: rotate(-45deg);
+  margin-top: 8px;
+  z-index: 2;
+}
+
+.menu-on .burger__line-2 {
+  transform: scale(0);
+  opacity: 0;
+  z-index: 2;
+}
+
+/*полноэкранное меню*/
+.full-screen-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba($black, .95);
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  opacity: 0;
+  transition: all .3s;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: initial;
+}
+
+.burger-menu__list {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+
+.burger-menu__link {
+  font-size: 36px;
+  opacity: 1;
+  transition: all .3s;
+
+  &:hover {
+    opacity: .8;
+    text-decoration: underline;
+    background-color: transparent;
+  }
+}

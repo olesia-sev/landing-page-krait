@@ -1,0 +1,36 @@
+/*resolutions*/
+$desktop: 1200px;
+$laptop: 990px;
+$tablets: 768px;
+$phones480: 480px;
+$phones: 320px;
+
+/*colors*/
+$gradient: linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+$lightgrey: #777;
+$black: #222;
+$lightblue: #f7fafc;
+$pink: #f31f79;
+
+/*общее*/
+@import '_misc/fonts';
+@import '_misc/mixins';
+@import 'common/global';
+
+/*sections*/
+@import 'common/hero';
+@import 'common/features';
+@import 'common/reasons';
+@import 'common/screenshots';
+@import 'common/prices';
+@import 'common/video';
+@import 'common/feedback';
+@import 'common/download-app';
+
+/*parts*/
+@import 'common/header';
+@import 'common/burger-menu';
+@import 'common/triangles';
+@import 'common/slider-buttons';
+@import 'common/footer';
+@import 'common/screenshots-carousel';

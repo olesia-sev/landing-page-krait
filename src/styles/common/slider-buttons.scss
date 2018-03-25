@@ -1,0 +1,73 @@
+.slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translate(5%, -50%);
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  transition: all .3s;
+  cursor: pointer;
+
+  @include tablets {
+    top: 100%;
+    transform: translate(-100%, -50%);
+  }
+
+  @include phones {
+    top: 90%;
+    transform: translate(-90%, -55%);
+  }
+
+  &--left {
+    left: -85px;
+
+    @include desktop {
+      left: -35px;
+    }
+
+    @include tablets {
+      left: 45%;
+    }
+
+    @include phones {
+      left: 40%;
+    }
+  }
+
+  &--right {
+    right: -85px;
+
+    @include desktop {
+      right: -35px;
+    }
+
+    @include tablets {
+      left: 55%;
+    }
+    @include phones {
+      left: 60%;
+    }
+  }
+
+  &:hover {
+    background: $gradient;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, .1);
+
+    .slider__button--svg {
+      fill: #fff;
+    }
+  }
+}
+
+.slider__button--svg {
+  fill: #777;
+  width: 15px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s;
+}

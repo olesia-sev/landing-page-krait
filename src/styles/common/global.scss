@@ -1,0 +1,141 @@
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  font-family: 300;
+  color: $lightgrey;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #fff;
+  overflow-x: hidden;
+
+  @include phones480 {
+    line-height: 20px;
+  }
+
+  @include phones {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+} 
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  position: relative;
+}
+
+.content {
+  max-width: 1140px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__row {
+    flex-direction: row;
+
+    @include desktop {
+      padding: 0 5%;
+    }
+  }
+  &__center {
+    align-items: center;
+
+    @include desktop {
+      padding: 0 5%;
+    }
+  }
+
+  @include desktop {
+    padding: 0 5%;
+  }
+}
+
+.section__title {
+  font-family: Dosis;
+  color: $black;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 30px;
+
+  @include phones480 {
+    font-size: 30px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--white {
+    color: #fff;
+  }
+}
+
+sub, sup {
+  font-size: 18px;
+}
+
+sub {
+  bottom: 0;
+}
+
+sup {
+  top: -1em;
+}
+
+.section__subtitle {
+  width: 64%;
+  margin: 20px auto 80px;
+  line-height: 24px;
+  text-align: center;
+
+  @include tablets {
+    margin-bottom: 20px;
+  }
+}
+
+// nav, nav:hover, nav ul a, nav ul a:hover {
+//   background-color: transparent;
+//   box-shadow: none;
+//   width: inherit;
+//   height: inherit;
+//   line-height: inherit;
+//   color: inherit;
+//   padding: 0;
+//   display: inherit
+// }
+
+.no-scroll {
+  overflow: hidden;
+}

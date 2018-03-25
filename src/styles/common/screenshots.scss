@@ -1,0 +1,17 @@
+.screenshots {
+  background-color: $lightblue;
+  padding: 120px 0;
+
+  @include phones480 {
+    padding: 40px 0;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__slider {
+    height: 600px;
+    position: relative;
+  }
+}
