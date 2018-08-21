@@ -1,0 +1,359 @@
+extends ../template
+
+block content
+    .wrapper
+        section.section.hero#home
+            .content
+                header.header
+                    a.logo-wrapper
+                        .logo
+                            svg.logo__svg
+                                use(xlink:href='assets/images/icons.svg#logo')
+                        span.logo__text Giant
+                    .menu(role='navigation')
+                        ul.menu__list
+                            -
+                                var items = [
+                                {
+                                title: 'Home',
+                                href: '#',
+                                linkClassName: 'home',
+                                text: 'Home'
+                                },
+                                {
+                                title: 'Features',
+                                href: '#features',
+                                linkClassName: 'features',
+                                text: 'Features'
+                                },
+                                {
+                                title: 'Pricing',
+                                href: '#price',
+                                linkClassName: 'pricing',
+                                text: 'Pricing'
+                                },
+                                ]
+                            for i in items
+                                li.menu__item
+                                    a.menu__link(
+                                    href= i.href,
+                                    title= i.title
+                                    )
+                                        | #{i.text}
+                        a.menu__button-download.button-white(href="#download") Download Now
+                        span.burger
+                            .burger__line-1
+                            .burger__line-2
+                            .burger__line-3
+                main.hero__main
+                    .hero__content
+                        h1.hero__title A Powerful &amp; Unique App Landing Template
+                        .hero__text
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            ul.hero__list
+                                li.hero__item Unlimited colors: banner with images, slider or video
+                                li.hero__item Fully Responsive and powered by HTML5 and CSS3
+                                li.hero__item Very easy to customize: set up in minutes
+                        a.hero__button.button-white.button-white--shadow(href="#") Start Exploring Us
+        section.section.features#features
+            .content.container__features
+                ul.features__list
+                    -
+                        var features = [
+                        {
+                        title: 'Sell any product online',
+                        content: 'Over 92% of computers are infected with Adware and spyware. Such software is'
+                        },
+                        {
+                        class: 'features__item--cog',
+                        title: 'Very easy to customize',
+                        content: 'Many of us are so used to working on a computer desktop that when it comes'
+                        },
+                        {
+                        class: 'features__item--brush',
+                        title: 'Unlimited colors',
+                        content: 'Audio player software is used to play back sound recordings in one of the many'
+                        },
+                        {
+                        class: 'features__item--fire',
+                        title: 'Responsive, HTML5, CSS3',
+                        content: 'Computers have become ubiquitous in almost every facet of our lives. At work,'
+                        },
+                        {
+                        class: 'features__item--file',
+                        title: 'Designed to convert',
+                        content: "If you are looking for a new way to promote your business that won't cost"
+                        },
+                        {
+                        class: 'features__item--ring',
+                        title: 'With no boundaries',
+                        content: 'Now, if you are interested in being the best player, getting really good money and'
+                        },
+                        ]
+                    for f in features
+                        li.features__item(class=f.class)
+                            .features__content
+                                h2.features__title #{f.title}
+                                .features__text
+                                    p #{f.content}
+        section.section.reasons
+            .content.content__row.content__center.reasons__content
+                .reasons__pic
+                    img(src="assets/images/iPhone.png").reasons__img
+                .reasons__info
+                    h1.section__title We don’t leave you stranded
+                    .reasons__text
+                        p.reasons__text--first Everyone’s reasons for learning user interface design are different. If you're already a developer,or a PM, or a UX designer, why develop this totally separate skill?
+                        p.reasons__text--second Everyone’s reasons for learning user interface design are different. If you're already a developer,or a PM, or a UX designer, why develop this totally separate skill? If you're already a developer,or a PM, or a UX designer.
+                        ul.reasons__list
+                            li.reasons__item Unlimited colors: banner with images, slider or video
+                            li.reasons__item Fully Responsive and powered by HTML5 and CSS3
+                            li.reasons__item Very easy to customize: set up in minutes
+        section.section.screenshots
+            .content
+                h1.section__title.section__title--center Take a look at our screenshots
+                .section__subtitle.screenshots__subtitle
+                    p Everyone's reasons for learning user interface design are different. If you're already a developer,or a PM, or a UX designer, why develop this totally separate skill?
+                .screenshots__slider
+                    .slider__button.slider__button--left.js-carousel__button--left
+                        svg.slider__button--svg
+                            use(xlink:href='assets/images/icons.svg#long-arrow-alt-left')
+                    ul.carousel
+                        - for (var i = 1; i <= 7; i++)
+                        li.carousel-item
+                            img.carousel-img(src=`assets/images/slider/slider${i}.jpg`, alt="screenshots")
+                    .slider__button.slider__button--right.js-carousel__button--right
+                        svg.slider__button--svg
+                            use(xlink:href='assets/images/icons.svg#long-arrow-alt-right')
+        section.section.prices#price
+            .content
+                h1.section__title We've got the perfect package for you
+                .section__subtitle
+                    p Everyone's reasons for learning user interface design are different. If you're already a developer,or a PM, or a UX designer, why develop this totally separate skill?
+                ul.prices__list
+                    li.prices__item
+                        h2.prices__item-title Basic
+                        .prices__item-price <sup>$</sup>12.0<sub>/m</sub>
+                        .prices__item-description
+                            include ../common/triangles
+                            ul.prices__item-list
+                                li.prices__item-item One User
+                                li.prices__item-item Multiple Access
+                                li.prices__item-item SMS Support
+                                li.prices__item-item 24/7 Online Support
+                        .prices__item-start Start Free Trial
+                        a.button-white.button-white--border(href="#") Buy now
+                    li.prices__item
+                        h2.prices__item-title Standard
+                        .prices__item-price <sup>$</sup>24.0<sub>/m</sub>
+                        .prices__item-description
+                            include ../common/triangles
+                            ul.prices__item-list
+                                li.prices__item-item Five User
+                                li.prices__item-item Multiple Access
+                                li.prices__item-item SMS Support
+                                li.prices__item-item 24/7 Online Support
+                        .prices__item-start Start Free Trial
+                        a.button-white.button-white--border(href="#") Buy now
+                    li.prices__item
+                        h2.prices__item-title Premium
+                        .prices__item-price <sup>$</sup>250.0<sub>/m</sub>
+                        .prices__item-description
+                            include ../common/triangles
+                            ul.prices__item-list
+                                li.prices__item-item Twenty User
+                                li.prices__item-item Multiple Access
+                                li.prices__item-item SMS Support
+                                li.prices__item-item 24/7 Online Support
+                        .prices__item-start Start Free Trial
+                        a.button-white.button-white--border(href="#") Buy now
+                    li.prices__item
+                        h2.prices__item-title Enterprise
+                        .prices__item-price <sup>$</sup>999.0<sub>/m</sub>
+                        .prices__item-description
+                            include ../common/triangles
+                            ul.prices__item-list
+                                li.prices__item-item Unlimited User
+                                li.prices__item-item Multiple Access
+                                li.prices__item-item SMS Support
+                                li.prices__item-item 24/7 Online Support
+                        .prices__item-start Start Free Trial
+                        a.button-white.button-white--border(href="#") Buy now
+        section.section.video__section
+            .video__container
+                .video__overlay
+                video(width="100%" height="400" poster="assets/images/video.jpg" muted)#video.video
+                    source(src="assets/video/SampleVideo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                    source(src="assets/video/SampleVideo.webm" type='video/webm; codecs="vp8, vorbis"')
+                    p Your browser doesn't support HTML5 video. <a href="assets/video/SampleVideo.mp4">Download</a> the video instead.
+                .video__controls#video_controls
+                    button(type="button")#play_pause.video__play
+        section.section.feedback
+            .content
+                h1.section__title.section__title--center What our customers are saying
+                .section__subtitle
+                    p Everyone's reasons for learning user interface design are different. If you're already a developer,or a PM, or a UX designer, why develop this totally separate skill?
+                .feedback-slider
+                    .slider__button.slider__button--left.js-slider__button--left
+                        svg.slider__button--svg
+                            use(xlink:href='assets/images/icons.svg#long-arrow-alt-left')
+                    ul.feedback-slider__list.owl-carousel.owl-theme
+                        -
+                            var comments = [
+                            {
+                            text: 'The JustLanded for WordPress theme is great, super easy to use and to customize and the support is just awesome: super fast and reliable.',
+                            photo: 'assets/images/comment1.jpg',
+                            name: 'Alexandra Bullock',
+                            company: 'Apple Inc.'
+                            },
+                            {
+                            text: 'Very happy with the theme and incredibly easy to configure, well done! I cannot emphasize how awesome this theme and developer support are.',
+                            photo: 'assets/images/comment2.jpg',
+                            name: 'Gary Sebastian',
+                            company: 'Apple Inc.'
+                            },
+                            {
+                            text: 'Definitely a great theme and the support team are fantastic. Customer support is numero uno and ShapingRain have got this spot on. Cheers guys.',
+                            photo: 'assets/images/comment3.jpg',
+                            name: 'Samantha Bilbau',
+                            company: 'Apple Inc.'
+                            },
+                            {
+                            text: 'Very happy with the theme and incredibly easy to configure, well done! I cannot emphasize how awesome this theme and developer support are.',
+                            photo: 'assets/images/comment2.jpg',
+                            name: 'Gary Sebastian',
+                            company: 'Apple Inc.'
+                            },
+                            {
+                            text: 'The JustLanded for WordPress theme is great, super easy to use and to customize and the support is just awesome: super fast and reliable.',
+                            photo: 'assets/images/comment1.jpg',
+                            name: 'Alexandra Bullock',
+                            company: 'Apple Inc.'
+                            },
+                            {
+                            text: 'Definitely a great theme and the support team are fantastic. Customer support is numero uno and ShapingRain have got this spot on. Cheers guys.',
+                            photo: 'assets/images/comment3.jpg',
+                            name: 'Samantha Bilbau',
+                            company: 'Apple Inc.'
+                            },
+                            ]
+                        for i in comments
+                            li.feedback-slider__item
+                                .feedback-slider__text
+                                    p #{i.text}
+                                .feedback-slider__author
+                                    .feedback-slider__photo
+                                        img(src= i.photo, alt="photo of our customer").feedback-slider__img
+                                    .feedback-slider__name-wrap
+                                        span.feedback-slider__name #{i.name}
+                                        span.feedback-slider__company #{i.company}
+                    .slider__button.slider__button--right.js-slider__button--right
+                        svg.slider__button--svg
+                            use(xlink:href='assets/images/icons.svg#long-arrow-alt-right')
+        section.section.download#download
+            .content
+                h1.section__title.section__title--center.section__title--white Download Giant App Now
+                ul.download__list
+                    -
+                        var apps = [
+                        {
+                        href: '#',
+                        img: 'assets/images/mac-icon.png',
+                        alt: 'apple store icon',
+                        title: 'Download',
+                        text: 'Download from app store'
+                        },
+                        {
+                        href: '#',
+                        img: 'assets/images/android-icon.png',
+                        alt: 'android icon',
+                        title: 'Download',
+                        text: 'Download from app store'
+                        },
+                        {
+                        href: '#',
+                        img: 'assets/images/windows-icon.png',
+                        alt: 'windows store icon',
+                        title: 'Download',
+                        text: 'Download from app store'
+                        },
+                        ]
+                    for i in apps
+                        a(href= i.href).download__link
+                            li.download__item
+                                .download__pic
+                                    img(src= i.img, alt= i.alt).download__img
+                                .download__text
+                                    h2.download__title #{i.title}
+                                    p #{i.text}
+    footer.footer
+        .footer__row
+            ul.footer__socials
+                -
+                    var socials = [
+                    {
+                    href: '#',
+                    title: 'facebook',
+                    icon: 'assets/images/icons.svg#facebook-f'
+                    },
+                    {
+                    href: '#',
+                    title: 'twitter',
+                    icon: 'assets/images/icons.svg#twitter'
+                    },
+                    {
+                    href: '#',
+                    title: 'dribbble',
+                    icon: 'assets/images/icons.svg#dribbble'
+                    },
+                    {
+                    href: '#',
+                    title: 'behance',
+                    icon: 'assets/images/icons.svg#behance'
+                    },
+                    ]
+                for i in socials
+                    a.footer__link(href=i.href, title= i.title)
+                        svg.footer__svg
+                            use(xlink:href= i.icon)
+        .footer__row
+            .footer__copyright
+                p Copyright © 2017  |  UXSEVEN - a sister concern of
+                    a(href="#").footer__copyright-link codepixar.com
+    .full-screen-menu#full-screen-menu
+        .burger-menu(role='navigation')
+            ul.burger-menu__list
+                -
+                    var items = [
+                    {
+                    title: 'Home',
+                    href: '#home',
+                    linkClassName: 'home',
+                    text: 'Home'
+                    },
+                    {
+                    title: 'Features',
+                    href: '#features',
+                    linkClassName: 'features',
+                    text: 'Features'
+                    },
+                    {
+                    title: 'Pricing',
+                    href: '#price',
+                    linkClassName: 'pricing',
+                    text: 'Pricing'
+                    },
+                    {
+                    title: 'Donwload Now',
+                    href: '#download',
+                    linkClassName: 'download now',
+                    text: 'Download Now'
+                    },
+                    ]
+                for i in items
+                    li.burger-menu__item
+                        a.burger-menu__link(
+                        href= i.href,
+                        title= i.title
+                        )
+                            | #{i.text}

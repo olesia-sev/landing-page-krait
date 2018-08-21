@@ -1,4 +1,43 @@
 .header {
+    width: 100%;
+    padding: 30px 0 20px;
+
+    &__inner {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: baseline;
+        &-svg {
+            width: 48px;
+            height: 40px;
+            svg {
+                fill: #fff;
+            }
+        }
+        &-text {
+            font-family: dosis;
+            font-size: 36px;
+            font-weight: 700;
+        }
+    }
+    &__link {
+        display: inline-block;
+        margin-right: 46px;
+        border-bottom: 1px solid transparent;
+        transition: border .3s;
+        &:hover {
+            border-bottom: 1px solid #fff;
+        }
+    }
+}
+
+/*
+.header {
   display: flex;
   padding: 30px 0 20px;
 
@@ -83,4 +122,4 @@
     background: linear-gradient(90deg, #fd712c 0%, #f21780 100%);
     transition: all .3s ease-in-out;
   }
-}
+}*/

@@ -25,9 +25,22 @@ body {
   }
 }
 
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+    font-family: dosis;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 23px;
 }
 
 ul {
@@ -37,6 +50,11 @@ ul {
 
 li {
   list-style: none;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
 }
 
 a {
@@ -53,23 +71,37 @@ a {
   position: relative;
 }
 
+.btn {
+    position: relative;
+    padding: 12px 30px;
+    font-weight: 500;
+    color: #222;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: background .3s;
+    &:hover {
+        background: $gradient;
+    }
+}
+
 .content {
   max-width: 1140px;
-  height: 100%;
+  //height: 100%;
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  &__row {
+  &_row {
     flex-direction: row;
 
     @include desktop {
       padding: 0 5%;
     }
   }
-  &__center {
+  &_center {
     align-items: center;
 
     @include desktop {
@@ -81,7 +113,9 @@ a {
     padding: 0 5%;
   }
 }
-
+.column {
+    width: 50%;
+}
 .section__title {
   font-family: Dosis;
   color: $black;
