@@ -31,7 +31,7 @@
         });
 
         //слайдер со скриншотами
-        $('.carousel').carousel({
+/*        $('.carousel').carousel({
             dist: -120,
             shift: -80,
             numVisible: 7
@@ -43,7 +43,7 @@
 
         $(".js-carousel__button--left").on("click", function () {
             $(".carousel").carousel('prev');
-        });
+        });*/
 
         //video, play button
         $(".video__play").on("click", function () {
@@ -52,17 +52,17 @@
                 video.play();
                 $(".video__play").addClass('display_none');
                 $(".video__overlay").addClass('display_none');
-                $(".video").attr("controls", "controls");
+                $(".video__film").attr("controls", "controls");
             } else {
                 // Pause the video
                 video.pause();
             }
         });
 
-        $(".video").on("click", function () {
+        $(".video__film").on("click", function () {
             video.pause();
             $(".video__play").removeClass('display_none');
-            $(".video").removeAttr("controls");
+            $(".video__film").removeAttr("controls");
         });
 
         //слайдер с отзывами
@@ -77,7 +77,7 @@
                 768: {
                     items: 2,
                 },
-                990: {
+                1100: {
                     items: 3
                 }
             }

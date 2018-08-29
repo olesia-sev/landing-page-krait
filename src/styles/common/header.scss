@@ -25,13 +25,20 @@
             font-weight: 700;
         }
     }
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
     &__link {
-        display: inline-block;
+        //display: inline-block;
         margin-right: 46px;
         border-bottom: 1px solid transparent;
         transition: border .3s;
         &:hover {
             border-bottom: 1px solid #fff;
+        }
+        @include tablets {
+            display: none;
         }
     }
 }

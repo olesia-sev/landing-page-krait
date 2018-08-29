@@ -1,3 +1,23 @@
+.reasons {
+    background-color: #fff;
+    padding: 120px 0;
+    @include phones480 {
+        padding: 40px 0;
+    }
+    p:last-of-type {
+        margin-bottom: 30px;
+    }
+    .container {
+        @include phones480 {
+            display: block;
+        }
+    }
+    .column {
+        @include phones480 {
+            width: 100%;
+        }
+    }
+}
 /*
 .reasons {
   background-color: #fff;

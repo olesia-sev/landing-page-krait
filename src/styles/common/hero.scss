@@ -1,6 +1,23 @@
 .hero {
+    height: 100vh;
     color: #fff;
-    background: linear-gradient(90deg, #fd712c 0%, #f21780 100%);
+    background: url('../images/iPhones.png'), $gradient;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 70%;
+    background-size: 65%, cover;
+    @include phones480 {
+        background-size: 70%, cover;
+        background-position-x: 100%;
+        background-position-y: 97%;
+    }
+    @include phones {
+        background-position-y: 34%;
+    }
+    .subtitle {
+        margin: 0;
+        max-width: none;
+    }
 }
 
 /*

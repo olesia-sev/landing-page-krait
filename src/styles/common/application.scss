@@ -1,0 +1,64 @@
+.application {
+    display: flex;
+    align-items: center;
+
+    width: 33%;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, .07);
+    transition: box-shadow .3s;
+    @include tablets {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    @include phones {
+        width: 100%;
+    }
+    &:not(:last-child) {
+        margin-right: 30px;
+        @include tablets {
+            margin-right: 0;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, .25);
+    }
+    &:hover .application__title {
+        color: #f31f79;
+    }
+    &__icon {
+        background-color: $lightblue;
+        width: 25%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @include tablets {
+            width: 40%;
+        }
+        img {
+            height: 50px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    &__info {
+        width: 75%;
+        height: 100%;
+        padding: 30px 30px 30px 20px;
+        font-family: roboto;
+        font-size: 14px;
+        color: #777;
+        font-weight: 300;
+        @include tablets {
+            width: 60%;
+        }
+    }
+    &__title {
+        margin-bottom: 14px;
+        font-family: dosis;
+        font-size: 30px;
+        color: #222;
+        font-weight: 600;
+        transition: all .3s;
+    }
+}

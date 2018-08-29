@@ -5,8 +5,12 @@
   @include phones480 {
     padding: 40px 0;
   }
+  .row {
+      width: 100%;
+      justify-content: space-between;
+  }
 
-  &__list {
+  /*&__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -78,20 +82,5 @@
       color: #aaa;
       margin-bottom: 24px;
     }
-  }
-}
-
-.prices__item:hover {
-  background-color: #fff;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
-}
-
-.prices__item:hover .triangle-svg {
-  fill: #fff;
-}
-
-.prices__item:hover .prices__item-price,
-.prices__item:hover .button-white--border {
-  color: #fff;
-  background: $gradient;
+  }*/
 }

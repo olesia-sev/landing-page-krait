@@ -1,12 +1,20 @@
 .download {
   background: $gradient;
   padding: 120px 0;
-
+  h2 {
+    margin-bottom: 80px;
+    color: #fff;
+  }
   @include phones480 {
     padding: 40px 0;
   }
+  .row {
+    @include tablets {
+      justify-content: center;
+    }
+  }
 
-  &__list {
+  /*&__list {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -100,5 +108,5 @@
     @include tablets {
       width: 60%;
     }
-  }
+  }*/
 }

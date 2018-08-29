@@ -27,7 +27,7 @@ body {
 
 section {
     width: 100vw;
-    height: 100vh;
+    //height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,14 +42,62 @@ h1 {
     line-height: 1.1;
     margin-bottom: 23px;
 }
+h2 {
+    font-family: dosis;
+    color:  $black;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+}
 
 ul {
   padding: 0;
-  margin: 0;
+  margin: 14px 0;
 } 
 
 li {
-  list-style: none;
+    list-style: none;
+    font-weight: 400;
+    position: relative;
+    margin-left: 5%;
+    @include phones {
+        margin-left: 10%;
+        line-height: 17px;
+    }
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+    &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: url('../images/check-circle.svg') center center no-repeat;
+        position: absolute;
+        left: -5%;
+        top: 50%;
+        transform: translateY(-50%);
+        @include phones {
+            left: -10%;
+        }
+    }
+}
+
+ul.list-black {
+    li:before {
+        background: url('../images/check-circle-black.svg') center center no-repeat;
+    }
+}
+
+p {
+    font-family: roboto;
+    font-size: 14px;
+    font-weight: 300;
+    color: $lightgrey;
+}
+
+img {
+    max-width: 100%;
 }
 
 svg {
@@ -58,8 +106,13 @@ svg {
 }
 
 a {
-  text-decoration: none;
-  color: #fff;
+    text-decoration: none;
+    color: #fff;
+    outline: transparent;
+}
+
+button {
+    outline: transparent;
 }
 
 * {
@@ -67,13 +120,22 @@ a {
 }
 
 .wrapper {
-  width: 100vw;
-  position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.row {
+    display: flex;
+   @include tablets {
+        flex-wrap: wrap;
+    }
 }
 
 .btn {
     position: relative;
-    padding: 12px 30px;
+    display: inline-block;
+    padding: 10px 30px;
     font-weight: 500;
     color: #222;
     background: #fff;
@@ -85,20 +147,20 @@ a {
     }
 }
 
-.content {
-  max-width: 1140px;
-  //height: 100%;
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.container {
+    max-width: 1140px;
+    width: 92%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
   &_row {
     flex-direction: row;
 
     @include desktop {
-      padding: 0 5%;
+        padding: 0 5%;
     }
   }
   &_center {
@@ -136,6 +198,10 @@ a {
   }
 }
 
+.subtitle {
+    line-height: 1.8;
+}
+
 sub, sup {
   font-size: 18px;
 }
@@ -148,7 +214,20 @@ sup {
   top: -1em;
 }
 
-.section__subtitle {
+.subtitle {
+    max-width: 64%;
+    margin: 20px auto 50px;
+    line-height: 1.8;
+    &_center {
+        text-align: center;
+    }
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+/*.section__subtitle {
   width: 64%;
   margin: 20px auto 80px;
   line-height: 24px;
@@ -157,7 +236,7 @@ sup {
   @include tablets {
     margin-bottom: 20px;
   }
-}
+}*/
 
 // nav, nav:hover, nav ul a, nav ul a:hover {
 //   background-color: transparent;
@@ -172,4 +251,8 @@ sup {
 
 .no-scroll {
   overflow: hidden;
+}
+.display_none {
+    display: none;
+    opacity: 0;
 }

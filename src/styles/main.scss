@@ -1,5 +1,6 @@
 /*resolutions*/
 $desktop: 1200px;
+$tablets_large: 1023px;
 $laptop: 990px;
 $tablets: 768px;
 $phones480: 480px;
@@ -25,12 +26,19 @@ $pink: #f31f79;
 @import 'common/prices';
 @import 'common/video';
 @import 'common/feedback';
-@import 'common/download-app';
+@import 'common/download';
 
 /*parts*/
 @import 'common/header';
 @import 'common/burger-menu';
+@import 'common/main';
+@import 'common/feature';
 @import 'common/triangles';
 @import 'common/slider-buttons';
 @import 'common/footer';
 @import 'common/screenshots-carousel';
+@import 'common/price';
+@import 'common/application';
+@import 'common/social-item';
+@import 'common/socials';
+@import 'common/copyright';

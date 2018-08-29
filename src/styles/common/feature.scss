@@ -1,0 +1,39 @@
+.feature {
+    width: 32%;
+    display: flex;
+    @media screen and (max-width: 1023px) {
+        width: 49%;
+    }
+    &:nth-of-type(-n+3) {
+        margin-bottom: 58px;
+    }
+    &__icon {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        border: 1px solid #eee;
+        border-radius: 50%;
+        svg {
+            width: 26px;
+            height: 26px;
+            max-width: 100%;
+            fill: #f31f79;
+        }
+    }
+    &__info {
+        width: 72%;
+    }
+    &__title {
+        margin-bottom: 20px;
+        //font-family: dosis;
+        color: #222;
+        font-size: 22px;
+        font-weight: 500;
+    }
+    &__content {
+        font-weight: 300;
+    }
+}

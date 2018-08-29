@@ -1,0 +1,18 @@
+.social-item {
+    display: inline-block;
+    height: 18px;
+    width: 22px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__svg {
+        height: 100%;
+        width: 100%;
+        fill: #fff;
+        transition: all .3s;
+    }
+    &:hover &__svg {
+        fill: $pink;
+    }
+}
