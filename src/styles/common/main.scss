@@ -1,29 +1,32 @@
 .main {
-    &__info {
-        width: 48%;
-        height: 100%;
-        //display: flex;
-        //align-items: center;
-        @include laptop {
-            width: 60%;
-        }
-        @include tablets {
-            width: 70%;
-        }
-        @include phones480 {
-            width: 100%;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        ul {
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 49%;
+    @include laptop {
+        width: 60%;
     }
-
+    @include tablets {
+        width: 70%;
+        justify-content: flex-start;
+        padding-top: 125px;
+    }
+    @include phones480 {
+        width: 100%;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    ul {
+        margin-bottom: 40px;
+        line-height: 1.8;
+    }
     &__btn {
         box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
     }
+    ul {
+        width: 100%;
+    }
 }
-

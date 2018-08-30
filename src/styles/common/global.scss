@@ -27,7 +27,6 @@ body {
 
 section {
     width: 100vw;
-    //height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,6 +40,12 @@ h1 {
     font-weight: 600;
     line-height: 1.1;
     margin-bottom: 23px;
+    @include tablets {
+        font-size: 46px;
+    }
+    @media screen and (max-width: 760px)  {
+        font-size: 36px;
+    }
 }
 h2 {
     font-family: dosis;
@@ -49,18 +54,22 @@ h2 {
     font-weight: 500;
     line-height: 1.1;
     text-align: left;
+    @include phones480 {
+        font-size: 30px;
+        text-align: center;
+    }
 }
 
 ul {
   padding: 0;
   margin: 14px 0;
-} 
+}
 
 li {
     list-style: none;
     font-weight: 400;
     position: relative;
-    margin-left: 5%;
+    margin-left: 8%;
     @include phones {
         margin-left: 10%;
         line-height: 17px;
@@ -74,7 +83,7 @@ li {
         height: 15px;
         background: url('../images/check-circle.svg') center center no-repeat;
         position: absolute;
-        left: -5%;
+        left: -8%;
         top: 50%;
         transform: translateY(-50%);
         @include phones {
@@ -197,11 +206,6 @@ button {
     color: #fff;
   }
 }
-
-.subtitle {
-    line-height: 1.8;
-}
-
 sub, sup {
   font-size: 18px;
 }
@@ -213,7 +217,6 @@ sub {
 sup {
   top: -1em;
 }
-
 .subtitle {
     max-width: 64%;
     margin: 20px auto 50px;
@@ -225,29 +228,10 @@ sup {
     @include tablets {
         margin-bottom: 20px;
     }
+    @include phones480 {
+        max-width: none;
+    }
 }
-
-/*.section__subtitle {
-  width: 64%;
-  margin: 20px auto 80px;
-  line-height: 24px;
-  text-align: center;
-
-  @include tablets {
-    margin-bottom: 20px;
-  }
-}*/
-
-// nav, nav:hover, nav ul a, nav ul a:hover {
-//   background-color: transparent;
-//   box-shadow: none;
-//   width: inherit;
-//   height: inherit;
-//   line-height: inherit;
-//   color: inherit;
-//   padding: 0;
-//   display: inherit
-// }
 
 .no-scroll {
   overflow: hidden;

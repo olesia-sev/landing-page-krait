@@ -31,26 +31,23 @@ block content
                                 }
                                 ]
                             for item in navItems
-                                a(href= item.href title= item.title).header__link
+                                a(href= item.href title= item.title).header__link.js-header-link
                                     | #{item.text}
-                            a(href='#download').btn.header__btn Download Now
-                            div.burger
+                            a(href='#download').btn.header__btn.js-btn-download Download Now
+                            div.burger.js-burger
                                 .burger__line-1
                                 .burger__line-2
                                 .burger__line-3
                 main.main
-                    .container.container_row
-                        .column.main__info
-                            h1 A Powerful &amp; Unique App Landing Template
-                            .subtitle
-                                | Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            ul
-                                li Unlimited colors: banner with images, slider or video
-                                li Fully Responsive and powered by HTML5 and CSS3
-                                li Very easy to customize: set up in minutes
-                            a(href='#').btn.main__btn Start Exploring Us
-                        .column.main__image
-        section.section.features
+                    h1 A Powerful &amp; Unique App Landing Template
+                    .subtitle
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    ul
+                        li Unlimited colors: banner with images, slider or video
+                        li Fully Responsive and powered by HTML5 and CSS3
+                        li Very easy to customize: set up in minutes
+                    a(href='#').btn.main__btn Start Exploring Us
+        section.section.features#features
             .container
                 .row
                     -
@@ -151,13 +148,13 @@ block content
                             a(href="#").btn.btn_border Buy now
         section.section.video
             .video__container
-                .video__overlay
-                video(width="100%" height="400" poster="assets/images/video.jpg" muted)#video.video__film
+                .video__overlay.js-video-overlay
+                video(width="100%" height="400" poster="assets/images/video.jpg" muted)#video.video__film.js-video-film
                     source(src="assets/video/SampleVideo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
                     source(src="assets/video/SampleVideo.webm" type='video/webm; codecs="vp8, vorbis"')
-                    p Your browser doesn't support HTML5 video. <a href="assets/video/SampleVideo.mp4">Download</a> the video instead.
-                .video__controls#video_controls
-                    button(type="button")#play_pause.video__play
+                    p Your browser doesn't support this video. <a href="assets/video/SampleVideo.mp4">Download</a> the video instead.
+                .video__controls.js-video-controls#video_controls
+                    button(type="button")#play_pause.video__play.js-video-play
         section.section.feedback
             .container
                 h2 What our customers are saying
@@ -167,7 +164,7 @@ block content
                     .slider__button.slider__button--left.js-slider__button--left
                         svg.slider__button--svg
                             use(xlink:href='assets/images/icons.svg#long-arrow-alt-left')
-                    .feedback-slider__list.owl-carousel.owl-theme
+                    .feedback-slider__list.owl-carousel.owl-theme.js-owl-carousel
                         -
                             var comments = [
                             {
@@ -288,7 +285,7 @@ block content
                 .row
                     .copyright Copyright © 2017  |  UXSEVEN - a sister concern of
                         a(href="#") &nbsp;  codepixar.com
-        .full-screen-menu#full-screen-menu
+        .full-screen-menu.js-full-screen-menu#full-screen-menu
             .burger-menu(role='navigation')
                 .burger-menu__list
                     -
@@ -320,6 +317,6 @@ block content
                         ]
                     for i in items
                         .burger-menu__item
-                            a.burger-menu__link(href= i.href, title= i.title)
+                            a.burger-menu__link.js-burger-menu-link(href= i.href, title= i.title)
                                 | #{i.text}
 

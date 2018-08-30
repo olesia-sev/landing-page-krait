@@ -1,86 +1,14 @@
 .prices {
   text-align: center;
   padding: 120px 0;
-
   @include phones480 {
     padding: 40px 0;
   }
   .row {
       width: 100%;
       justify-content: space-between;
+      @media screen and (max-width: 900px) {
+          flex-wrap: wrap;
+      }
   }
-
-  /*&__list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    width: 25%;
-    flex: 1;
-    padding: 0 0 50px;
-    background-color: #f7fafc;
-    transition: all .3s;
-    cursor: pointer;
-
-    @include tablets {
-      width: 50%;
-      min-width: 262px;
-      margin: 10px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 30px;
-
-      @include tablets {
-        margin-right: 10px;
-      }
-    }
-
-    &-title {
-      padding: 15px 0;
-      font-family: dosis;
-      color: #333;
-      font-size: 20px;
-      font-weight: 400;
-    }
-
-    &-price {
-      font-family: dosis;
-      color: #333;
-      font-size: 48px;
-      font-weight: 500;
-      padding: 30px 0 60px;
-      background-color: #fff;
-    }
-
-    &-description {
-      position: relative;
-    }
-
-    &-list {
-      padding: 15px 10% 50px;
-
-      @include phones480 {
-        padding: 15px 0 50px;
-      }
-    }
-
-    &-item {
-      line-height: 30px;
-
-      &:not(:last-child)::after {
-        content: '';
-        border-bottom: 1px dashed #eee;
-        width: 100%;
-        display: flex;
-      }
-    }
-
-    &-start {
-      color: #aaa;
-      margin-bottom: 24px;
-    }
-  }*/
 }

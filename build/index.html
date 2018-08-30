@@ -7,7 +7,6 @@
     <title>Welcome!</title>
     <link rel="stylesheet" href="assets/scripts/OwlCarousel/owl.carousel.min.css"/>
     <link rel="stylesheet" href="assets/scripts/OwlCarousel/owl.theme.default.min.css"/>
-    <!--link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"/>
     <link rel="stylesheet" href="assets/styles/main.min.css"/>
   </head>
@@ -25,8 +24,8 @@
                 </div>
                 <div class="header__logo-text">Giant</div>
               </div>
-              <nav class="nav header__menu"><a class="header__link" href="#" title="Home">Home</a><a class="header__link" href="#features" title="Features">Features</a><a class="header__link" href="#price" title="Pricing">Pricing</a><a class="btn header__btn" href="#download">Download Now</a>
-                <div class="burger">
+              <nav class="nav header__menu"><a class="header__link js-header-link" href="#" title="Home">Home</a><a class="header__link js-header-link" href="#features" title="Features">Features</a><a class="header__link js-header-link" href="#price" title="Pricing">Pricing</a><a class="btn header__btn js-btn-download" href="#download">Download Now</a>
+                <div class="burger js-burger">
                   <div class="burger__line-1"></div>
                   <div class="burger__line-2"></div>
                   <div class="burger__line-3"></div>
@@ -35,22 +34,17 @@
             </div>
           </header>
           <main class="main">
-            <div class="container container_row">
-              <div class="column main__info">
-                <h1>A Powerful &amp; Unique App Landing Template</h1>
-                <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                <ul>
-                  <li>Unlimited colors: banner with images, slider or video</li>
-                  <li>Fully Responsive and powered by HTML5 and CSS3</li>
-                  <li>Very easy to customize: set up in minutes</li>
-                </ul><a class="btn main__btn" href="#">Start Exploring Us</a>
-              </div>
-              <div class="column main__image"></div>
-            </div>
+            <h1>A Powerful &amp; Unique App Landing Template</h1>
+            <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+            <ul>
+              <li>Unlimited colors: banner with images, slider or video</li>
+              <li>Fully Responsive and powered by HTML5 and CSS3</li>
+              <li>Very easy to customize: set up in minutes</li>
+            </ul><a class="btn main__btn" href="#">Start Exploring Us</a>
           </main>
         </div>
       </section>
-      <section class="section features">
+      <section class="section features" id="features">
         <div class="container">
           <div class="row">
             <div class="feature">
@@ -237,14 +231,14 @@
       </section>
       <section class="section video">
         <div class="video__container">
-          <div class="video__overlay"></div>
-          <video class="video__film" width="100%" height="400" poster="assets/images/video.jpg" muted="muted" id="video">
+          <div class="video__overlay js-video-overlay"></div>
+          <video class="video__film js-video-film" width="100%" height="400" poster="assets/images/video.jpg" muted="muted" id="video">
             <source src="assets/video/SampleVideo.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
             <source src="assets/video/SampleVideo.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;"/>
-            <p>Your browser doesn't support HTML5 video. <a href="assets/video/SampleVideo.mp4">Download</a> the video instead.</p>
+            <p>Your browser doesn't support this video. <a href="assets/video/SampleVideo.mp4">Download</a> the video instead.</p>
           </video>
-          <div class="video__controls" id="video_controls">
-            <button class="video__play" type="button" id="play_pause"></button>
+          <div class="video__controls js-video-controls" id="video_controls">
+            <button class="video__play js-video-play" type="button" id="play_pause"></button>
           </div>
         </div>
       </section>
@@ -258,7 +252,7 @@
                 <use xlink:href="assets/images/icons.svg#long-arrow-alt-left"></use>
               </svg>
             </div>
-            <div class="feedback-slider__list owl-carousel owl-theme">
+            <div class="feedback-slider__list owl-carousel owl-theme js-owl-carousel">
               <div class="feedback-slider__item">
                 <div class="feedback-slider__text">The JustLanded for WordPress theme is great, super easy to use and to customize and the support is just awesome: super fast and reliable.</div>
                 <div class="feedback-slider__author">
@@ -355,20 +349,19 @@
           </div>
         </div>
       </footer>
-      <div class="full-screen-menu" id="full-screen-menu">
+      <div class="full-screen-menu js-full-screen-menu" id="full-screen-menu">
         <div class="burger-menu" role="navigation">
           <div class="burger-menu__list">
-            <div class="burger-menu__item"><a class="burger-menu__link" href="#home" title="Home">Home</a></div>
-            <div class="burger-menu__item"><a class="burger-menu__link" href="#features" title="Features">Features</a></div>
-            <div class="burger-menu__item"><a class="burger-menu__link" href="#price" title="Pricing">Pricing</a></div>
-            <div class="burger-menu__item"><a class="burger-menu__link" href="#download" title="Donwload Now">Download Now</a></div>
+            <div class="burger-menu__item"><a class="burger-menu__link js-burger-menu-link" href="#home" title="Home">Home</a></div>
+            <div class="burger-menu__item"><a class="burger-menu__link js-burger-menu-link" href="#features" title="Features">Features</a></div>
+            <div class="burger-menu__item"><a class="burger-menu__link js-burger-menu-link" href="#price" title="Pricing">Pricing</a></div>
+            <div class="burger-menu__item"><a class="burger-menu__link js-burger-menu-link" href="#download" title="Donwload Now">Download Now</a></div>
           </div>
         </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="assets/scripts/OwlCarousel/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="assets/scripts/main.js"></script>
   </body>
 </html>
